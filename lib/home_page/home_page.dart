@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                   width: 16,
                 ),
                 Icon(
-                  Icons.drag_handle,
+                  Icons.menu,
                   color: Colors.white,
                 ),
                 Spacer(),
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
@@ -92,7 +92,7 @@ Widget _gridWidget(HomeGridData homeGridData) {
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(homeGridData.icon),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Text(homeGridData.title)
