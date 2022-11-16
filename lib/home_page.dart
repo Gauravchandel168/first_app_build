@@ -8,61 +8,68 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+   // var arrColors=[Colors.blue,
+     // Colors.blue,
+      //Colors.blue,
+     // Colors.blue,];
+
+
+
+
+
     return Scaffold(
     appBar: AppBar(
-    title:Text("Nestle-"),  ),
-    body:Center(
-     child: Container(
-     child: GridView.count(
+    title:Text("Nestle-")  ),
+    body: Padding( padding: const EdgeInsets.all(80.0),
+      child: GridView.builder(  itemBuilder: (context, index) {
+        return Container(color: Colors.blue,);
 
-       crossAxisSpacing: 10,
-
-       mainAxisSpacing: 10,
-
-       crossAxisCount: 2,
-
-       children:<Widget> [
-
-         Container(
-     child:Coulumb(
-
-     leading:Icon(
-       CupertinoIcons.home,
-       color: Colors.white,
-       child:Text("chats",style: TextStyle(color: Colors.black),  )
-
-     ),
-         )
-
-         ),
-
-         Container(
-             child:L(
-
-               leading:Icon(
-                   CupertinoIcons.home,
-                   color: Colors.white,
-                   child:Text("Rezept/Express",style: TextStyle(color: Colors.black),  )
-
-               ),
-             )
-
-         ),
+      },  itemCount: 4, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,  mainAxisSpacing: 11,
+        crossAxisSpacing: 11,)
 
 
-       ],
+       /* children :[
+
+        Card(
+
+        elevation: 5,
+        child:Padding(  padding:const EdgeInsets.all(8.0),
+
+          child:Column(
+              children :[Icon(
+
+                Icons.chat,
+                color: Colors.blue,
+              ),
 
 
-     ),
+                Text("Chats")
+              ]),
+
+        ),
+      ),
 
 
-     ),
+       ] ,)
 
-),
+      )
+      ); */
 
+
+
+
+
+
+
+
+      ),
+    ),
       drawer:MYDrawer(),
 
-);
+    );
+
 
 
   }
